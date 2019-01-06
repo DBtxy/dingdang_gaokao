@@ -73,6 +73,7 @@ function intentRequestProcess($skill,$dkconfig)
 		}
 		
 		//语槽检查,并获取语槽的值
+
 		$require_slots = array();
 		$require_slots['loan'] = "";
 		$require_slots['years'] = "";

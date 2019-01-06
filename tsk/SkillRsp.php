@@ -13,6 +13,31 @@ class SkillRsp{
     }
 }
 
+function build_skill_success_response_page($config,$speech,$outText=NULL, $page="successDirective")
+{
+    $reponse['outputSpeech'] = new OutputSpeech($speech);
+
+    //这个东西设为false表示继续收听还未结束
+    $reponse['shouldEndSession'] = false;
+
+    $skillBody = new SkillRsp();
+    $rsp = new Response($reponse);
+    $directiveCfg = $config[$page];
+    $directiveCfg["token"] = get_token();
+    $displayDirective = new DisplayRenderTemplate($directiveCfg);
+    unset($displayDirective->template->backgroundAudio);
+    unset($displayDirective->template->url);
+    unset($displayDirective->template->listItems);
+    unset($displayDirective->template->backgroundImage->contentDescription);
+    if(!empty($outText)){
+        $displayDirective->template->textContent = new TextContentObj($outText);
+    }
+    $rsp->add_direvtives($displayDirective);
+    $skillBody->response = $rsp;
+
+    return array("header"=>$config['header'],"body"=>$skillBody);
+}
+
 function build_skill_success_response($config,$speech,$outText=NULL)
 {
 	$reponse['outputSpeech'] = new OutputSpeech($speech);
@@ -32,12 +57,21 @@ function build_skill_success_response($config,$speech,$outText=NULL)
 	if(!empty($outText)){
 		$displayDirective->template->textContent = new TextContentObj($outText);
 	}
-
 	$rsp->add_direvtives($displayDirective);
-	$skillBody->response = uri_open("","");
-
+	$skillBody->response = $rsp;
 	return array("header"=>$config['header'],"body"=>$skillBody);
 }
+
+function build_skill_uri_open($config,$speech,$outText=NULL, $url)
+{
+    $reponse['outputSpeech'] = new OutputSpeech($speech);
+    //这个东西设为false表示继续收听还未结束
+    $reponse['shouldEndSession'] = false;
+    $skillBody = new SkillRsp();
+    $skillBody->response = uri_open($outText, $url);
+    return array("header"=>$config['header'],"body"=>$skillBody);
+}
+
 
 function uri_open($text, $url)
 {

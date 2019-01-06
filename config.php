@@ -204,6 +204,137 @@ $config['dkconfig'] = array(
 		"exception" => array("type"=>"PlainText","text"=>"对不起，我不是很理解你说的。")
 	),
 	"header" => array('Content-Type'=>"application/json;charset=UTF-8"),
+
+
+
+	"generalDemands1"=> array(
+		"type"=>"Display.RenderTemplate",
+		"token"=>"string",
+		"template"=>array(
+			"type"=>"HorizontialListTemplate",
+			"listItems"=>array(
+				array(
+						"token"=>"string",
+						"textContent"=>array(
+							"title"=>"中国人民大学",
+							"description"=>"男女比例1:N,而且女同学形象气质俱佳"
+						),
+						"image"=>array(
+							"contentDescription"=>"string",
+							  "source"=>array(
+								"url"=>"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546776244506&di=300f403f7f690997a2f9fa39921c4d16&imgtype=0&src=http%3A%2F%2Fimg4q.duitang.com%2Fuploads%2Fitem%2F201501%2F07%2F20150107105726_L8Psk.jpeg"
+							  )
+
+						),
+					"url"=>"https://www.ruc.edu.cn/"
+					),
+				array(
+					"token"=>"string",
+					"textContent"=>array(
+						"title"=>"北京理工大学",
+						"description"=>"男女比例N:1,一对男女N对基，但是旁边有北外哦"
+					),
+					"image"=>array(
+						"contentDescription"=>"string",
+						"source"=>array(
+							"url"=>"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546776507286&di=94fdbcb5352a8a1e18f787e95bb02649&imgtype=0&src=http%3A%2F%2Fwww.bit.edu.cn%2Fimages%2Fcontent%2F2015-09%2F20150922164331172870.jpg"
+						)
+
+					),
+					"url"=>"http://www.bit.edu.cn/"
+				),
+
+				array(
+					"token"=>"string",
+					"textContent"=>array(
+						"title"=>"北京航空航天大学",
+						"description"=>"你可以在你宿舍找到一生所爱"
+					),
+					"image"=>array(
+						"contentDescription"=>"string",
+						"source"=>array(
+							"url"=>"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546778832235&di=8a5e11a04e79886033e562b9259f276c&imgtype=0&src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2F2d6fa4bcd181e0d7a3d705a81bb29e40316e4596.jpg"
+						)
+
+					),
+					"url"=>"https://www.buaa.edu.cn/"
+				),
+
+				array(
+					"token"=>"string",
+					"textContent"=>array(
+						"title"=>"北京外国语大学",
+						"description"=>"小姐姐只可远观"
+					),
+					"image"=>array(
+						"contentDescription"=>"string",
+						"source"=>array(
+							"url"=>"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546778810675&di=a9f19f2c640b2de72e3617c5b35bea82&imgtype=0&src=http%3A%2F%2Fi2.bbswater.fd.zol-img.com.cn%2Ft_s1200x5000%2Fg5%2FM00%2F06%2F0F%2FChMkJlhIl9GIK1tvABBGs9EmbksAAYYngL_vngAEEbL282.jpg"
+						)
+
+					),
+					"url"=>"http://www.bfsu.edu.cn/"
+				),
+
+				),
+		)
+	),
+
+	"generalDemands2"=>array(
+		"type"=>"Display.RenderTemplate",
+		"token"=>"string",
+		"template"=>array(
+			"type"=>"HorizontialListTemplate",
+			"listItems"=>array(
+				array(
+					"token"=>"string",
+					"textContent"=>array(
+						"title"=>"北京外国语大学",
+						"description"=>"标准四人间，条件还是很不错的"
+					),
+					"image"=>array(
+						"contentDescription"=>"string",
+						"source"=>array(
+							"url"=>"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546782631175&di=06fb437fa8f1f7a131ca4dd167ed71f1&imgtype=0&src=http%3A%2F%2Fimg6.ph.126.net%2FOGIm8jovgbWmt8o9CVToBQ%3D%3D%2F6597226996819758116.jpg"
+						)
+
+					),
+					"url"=>"http://www.bfsu.edu.cn/"
+				),
+				array(
+					"token"=>"string",
+					"textContent"=>array(
+						"title"=>"北京理工大学",
+						"description"=>"宿舍虽说也是四人间，面积小，但是有空调"
+					),
+					"image"=>array(
+						"contentDescription"=>"string",
+						"source"=>array(
+							"url"=>"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546782812633&di=e44dccff06ce49645153983ffcc2df86&imgtype=0&src=http%3A%2F%2Fimage.zh51home.com%2Fnews%2FGeneralPictures%2FMiniatures%2Fd23ba6e8-d7a0-45d3-af34-061d3e3da0d4.png"
+						)
+
+					),
+					"url"=>"http://www.bit.edu.cn/"
+				),
+				array(
+						"token"=>"string",
+						"textContent"=>array(
+							"title"=>"中国人民大学",
+							"description"=>"宽敞且小资"
+						),
+						"image"=>array(
+							"contentDescription"=>"string",
+							  "source"=>array(
+								"url"=>"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546782858750&di=be9865b8a7260bf22cc51b4229db2147&imgtype=0&src=http%3A%2F%2Fwww.cn-kr.net%2Fupload%2Fnewsimg%2F20160628%2F1467086572610061.png"
+							  )
+
+						),
+					"url"=>"https://www.ruc.edu.cn/"
+					),
+			)
+		)
+	),
+
 	"successDirective" => array(
 		"type"=>"Display.RenderTemplate",
 		"template"=>array(
